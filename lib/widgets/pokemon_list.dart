@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex/services/pokedex_api.dart';
 import 'package:pokedex/widgets/pokelist_item.dart';
 
 import '../model/pokemon_model.dart';
 
 class PokemonList extends StatefulWidget {
-  const PokemonList({Key? key}) : super(key: key);
+  PokemonList({Key? key}) : super(key: key);
 
   @override
   State<PokemonList> createState() => _PokemonListState();
@@ -27,23 +28,22 @@ class _PokemonListState extends State<PokemonList> {
       builder: (context, snapshot) {
         if (snapshot.hasData) {
           var pokeList = snapshot.data!;
-          return ListView.builder(
-            itemCount: pokeList.length,
-            itemBuilder: (context, index) {
-              var opokemon = pokeList[index];
-              return PokeListItem(
-                pokemon: opokemon,
-              );
-            },
-          );
+          return GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount:
+                    ScreenUtil().orientation == Orientation.portrait ? 2 : 3,
+              ),
+              itemBuilder: (context, index) {
+                return PokeListItem(pokemon: pokeList[index]);
+              });
         } else if (snapshot.hasError) {
           debugPrint("35");
-          return const Center(
+          return Center(
             child: Text("404 veri gelmio"),
           );
         } else {
           debugPrint("38");
-          return const Center(child: CircularProgressIndicator());
+          return Center(child: CircularProgressIndicator());
         }
       },
     );
