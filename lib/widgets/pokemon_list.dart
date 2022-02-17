@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pokedex/services/pokedex_api.dart';
+import 'package:pokedex/widgets/pokelist_item.dart';
 
 import '../model/pokemon_model.dart';
 
@@ -29,10 +30,9 @@ class _PokemonListState extends State<PokemonList> {
           return ListView.builder(
             itemCount: pokeList.length,
             itemBuilder: (context, index) {
-              var pokemon = pokeList[index];
-              return ListTile(
-                title: Text(pokemon.name.toString()),
-                subtitle: Text(pokemon.type.toString()),
+              var opokemon = pokeList[index];
+              return PokeListItem(
+                pokemon: opokemon,
               );
             },
           );
@@ -49,3 +49,13 @@ class _PokemonListState extends State<PokemonList> {
     );
   }
 }
+
+/*
+return ListView.builder(
+            itemCount: pokeList.length,
+            itemBuilder: (context, index) {
+              var opokemon = pokeList[index];
+              return PokeListItem(pokemon: opokemon,);
+            },
+          );
+*/
