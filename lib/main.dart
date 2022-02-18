@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
         title: "Pokedex",
         theme:
             ThemeData.dark().copyWith(textTheme: GoogleFonts.latoTextTheme()),
-        home: const HomePage(),
+        home:  HomePage(),
       ),
     );
   }

@@ -29,6 +29,7 @@ class _PokemonListState extends State<PokemonList> {
         if (snapshot.hasData) {
           var pokeList = snapshot.data!;
           return GridView.builder(
+              itemCount: pokeList.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount:
                     ScreenUtil().orientation == Orientation.portrait ? 2 : 3,
