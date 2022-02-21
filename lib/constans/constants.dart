@@ -8,18 +8,18 @@ class Constants {
     return TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(48));
+        fontSize: _calculateFontSize(40));
   }
 
   static TextStyle getPokemonNameTextStyle() {
     return TextStyle(
         color: Colors.white,
         fontWeight: FontWeight.bold,
-        fontSize: _calculateFontSize(30));
+        fontSize: _calculateFontSize(22));
   }
 
   static TextStyle getTypeChipTextStyle() {
-    return TextStyle(color: Colors.white, fontSize: _calculateFontSize(20));
+    return TextStyle(color: Colors.white, fontSize: _calculateFontSize(14));
   }
 
   static _calculateFontSize(int size) {
@@ -28,5 +28,16 @@ class Constants {
     } else {
       return size.sp;
     }
+  }
+
+  static getPokeInfoLabelTextStyle() {
+    return TextStyle(
+        fontSize: _calculateFontSize(24),
+        fontWeight: FontWeight.bold,
+        color: Colors.black);
+  }
+
+  static getPokeInfoTextStyle() {
+    return TextStyle(fontSize: _calculateFontSize(20), color: Colors.black);
   }
 }

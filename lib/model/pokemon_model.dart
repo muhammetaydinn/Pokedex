@@ -139,4 +139,8 @@ class Evolution {
         "num": num == null ? null : num,
         "name": name == null ? null : name,
       };
+  @override
+  String toString() {
+    return "$name";
+  }
 }
