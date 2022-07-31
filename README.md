@@ -1,16 +1,8 @@
-# pokedex
+# Pokedex
 
-A new Flutter project.
+Tum Pokemonların elementine göre renklendirilmiş ve tıklandığında detaylarını gösteren app.
 
-## Getting Started
+<img src="https://user-images.githubusercontent.com/72871376/182004371-639908c9-861d-4cb9-99e5-fa257d58276b.jpg" width="180" height="320" />  <img src="https://user-images.githubusercontent.com/72871376/182004373-04b188a2-7716-4102-af52-b0c4c8bfeaa7.jpg" width="180" height="320" />   <img src="https://user-images.githubusercontent.com/72871376/182004376-699f0bfa-5cff-4f72-9438-04eaf2db9c1a.jpg" width="180" height="320" />  
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
